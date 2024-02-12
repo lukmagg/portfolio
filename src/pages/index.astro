@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Badge from '../components/Badge.astro'
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
+import GitHubIcon from '../components/icons/GitHubIcon.astro'
+import MailIcon from '../components/icons/MailIcon.astro'
+import ExperienceIcon from '../components/icons/ExperienceIcon.astro'
+import Experience from '../components/Experience.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+---
+
+<Layout title="Portfolio de Lucas Antonio Maggio - Desarrollador Web" description='Contrata Lucas Antonio Maggio para crear tu pagina web.'>
+	<main>
+		<SectionContainer class="py-44 pb-22">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">Lucas Antonio Maggio <a href="https://www.linkedin.com/in/lam2023/" target="_blank" rel="noopener"><div class="flex justify-center items-center"><Badge>Disponible</Badge></a></div></h1>
+			<h2 class="text-2xl text-wrap"><span>+3 años de experiencia.</span> <span class="opacity-80">Desarrollador Web.</span> <span class="text-cyan-600">Palma de Mallorca</span> <span class="opacity-80">Especializado en Backend.</span></h2>
+			<ul class="mt-4 flex gap-x-4">
+				<li>
+					<a href="https://www.linkedin.com/in/lam2023/" class="hover:scale-110 hover:bg-white/10 transition rounded-full border border-white/10 py-2 px-4 flex justify-center items-center gap-x-2">
+						<LinkedInIcon class="w-6 h-6" />
+					LinkedIn
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/lukmagg" class="hover:scale-110 hover:bg-white/10 transition rounded-full border border-white/10 py-2 px-4 flex justify-center items-center gap-x-2">
+						<GitHubIcon class="w-6 h-6" />
+					GitHub
+					</a>
+				</li>
+				<li>
+					<a href="lucmagg2020@gmail.com" class="hover:scale-110 hover:bg-white/10 transition rounded-full border border-white/10 py-2 px-4 flex justify-center items-center gap-x-2">
+						<MailIcon class="w-6 h-6" />
+					lucmagg2020@gmail.com
+					</a>
+				</li>
+			</ul>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-4 gap-x-2 flex items-center">
+				<ExperienceIcon class="w-6 h-6"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+	</main>
+</Layout>
+
