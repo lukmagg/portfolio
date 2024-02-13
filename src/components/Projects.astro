@@ -4,6 +4,8 @@ import PostreSQLIcon from '../components/icons/PostreSQLIcon.astro'
 import NestJSIcon from '../components/icons/NestJSIcon.astro'
 import PrismaIcon from '../components/icons/PrismaIcon.astro'
 import GraphQLIcon from '../components/icons/GraphQLIcon.astro'
+import MongoIcon from '../components/icons/MongoIcon.astro'
+import VueIcon from '../components/icons/VueIcon.astro'
 
 
 const TAGS = {
@@ -31,6 +33,16 @@ const TAGS = {
         name: 'GraphQL',
         class: "bg-black text-white",
         icon: GraphQLIcon
+    },
+    MONGO: {
+        name: 'Mongo',
+        class: "bg-black text-white",
+        icon: MongoIcon
+    },
+    VUE: {
+        name: 'Vue.js',
+        class: "bg-black text-white",
+        icon: VueIcon
     }
 }
 
@@ -42,13 +54,21 @@ const PROJECTS = [
         github: 'https://github.com/falanges/librarymanager',
         image: 'library-img.jpg',
         tags: [TAGS.NEXT, TAGS.POSTGRE, TAGS.NEST, TAGS.PRISMA, TAGS.GRAPHQL]
+    },
+    {
+        title: 'MS - Mushroom system',
+        description: 'Sistema diseñado para la administracion de una compania dedicada a produccion y venta de setas comestibles. Esta hecha en el backend con NestJS y el frontend con Vue.js y Quasar. La base de datos es MongoDB, y usa el ORM Mongoose y GraphQL.',
+        link: '#',
+        github: 'https://github.com/falanges/librarymanager',
+        image: 'ms-img.jpg',
+        tags: [TAGS.NEST, TAGS.VUE, TAGS.GRAPHQL, TAGS.MONGO]
     }
 ]
 ---
 
 {
     PROJECTS.map(({title, description, link, github, image, tags}) => (
-        <article class="flex flex-col">
+        <article class="flex flex-col mb-24">
             <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex mb-4 mt-4">
