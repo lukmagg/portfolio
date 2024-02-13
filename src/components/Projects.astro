@@ -1,0 +1,66 @@
+---
+import NextJSIcon from '../components/icons/NextJSIcon.astro'
+import PostreSQLIcon from '../components/icons/PostreSQLIcon.astro'
+import NestJSIcon from '../components/icons/NestJSIcon.astro'
+import PrismaIcon from '../components/icons/PrismaIcon.astro'
+import GraphQLIcon from '../components/icons/GraphQLIcon.astro'
+
+
+const TAGS = {
+    NEXT: {
+        name: "Next.js",
+        class: "bg-black text-white",
+        icon: NextJSIcon 
+    },
+    POSTGRE: {
+        name: 'PostgreSQL',
+        class: "bg-black text-white",
+        icon: PostreSQLIcon
+    },
+    NEST: {
+        name: 'NestJS',
+        class: "bg-black text-white",
+        icon: NestJSIcon
+    },
+    PRISMA: {
+        name: 'Prisma',
+        class: "bg-black text-white",
+        icon: PrismaIcon
+    },
+    GRAPHQL: {
+        name: 'GraphQL',
+        class: "bg-black text-white",
+        icon: GraphQLIcon
+    }
+}
+
+const PROJECTS = [  
+    {
+        title: 'UWU - Library Manager',
+        description: 'App web para el manejo de bibliotecas de libros. Es un monorepo Construido con Nest js en el backend y Next (React) en el frontend. La base de datos es PostgreSQL (GraphQL).',
+        link: '#',
+        github: 'https://github.com/falanges/librarymanager',
+        image: 'library-img.jpg',
+        tags: [TAGS.NEXT, TAGS.POSTGRE, TAGS.NEST, TAGS.PRISMA, TAGS.GRAPHQL]
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, link, github, image, tags}) => (
+        <article class="flex flex-col">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex mb-4 mt-4">
+                {
+                    tags.map((tag) => (
+                    <li class="flex mr-6">
+                        <tag.icon class="h-6 w-6 mr-2"/>
+                        {tag.name}
+                    </li>
+                ))}
+            </ul>
+            <img class="w-[750px] h-[550px]" src={image} alt={`Captura de pantalla del proyecto ${title}`}>
+        </article>
+    ))
+}
