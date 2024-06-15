@@ -6,9 +6,13 @@ import GitHubIcon from '../components/icons/GitHubIcon.astro'
 import MailIcon from '../components/icons/MailIcon.astro'
 import ExperienceIcon from '../components/icons/ExperienceIcon.astro'
 import ProjectsIcon from '../components/icons/ProjectsIcon.astro'
+import ContactIcon from '../components/icons/ContactIcon.astro'
 import Experience from '../components/Experience.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Projects from '../components/Projects.astro'
+import Contact from '../components/Contact.jsx'
+//import MyFormComponent from '../components/MyFormComponent.jsx'
+
 ---
 
 <Layout title="Portfolio de Lucas Antonio Maggio - Desarrollador Web" description='Contrata Lucas Antonio Maggio para crear tu pagina web.'>
@@ -54,8 +58,19 @@ import Projects from '../components/Projects.astro'
 			</h2>
 			<Projects />
 		</SectionContainer>
+
+		{
+		false && (
+			<SectionContainer id="contact">
+				<h2 class="text-white text-2xl font-semibold mb-2 gap-x-2 flex items-center">
+					<ContactIcon class="w-6 h-6"/>
+					Contacto
+				</h2>
+				<Contact client:load />
+			</SectionContainer>
+		)
+		}
 		
 	</main>
-	
 </Layout>
 
