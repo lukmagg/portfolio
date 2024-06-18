@@ -50,12 +50,16 @@ const { title, description } = Astro.props;
 		html {
 			scroll-behavior: auto;
 		}
+		
 	}
 
 	/* Estilos para pantallas pequeñas (dispositivos móviles) */
 @media (max-width: 767px) {
   body {
-    display: none; /* Oculta el contenido en dispositivos móviles */
+    //display: none; /* Oculta el contenido en dispositivos móviles */
   }
+  .hide-small {
+			display: none;
+		}
 }
 </style>
