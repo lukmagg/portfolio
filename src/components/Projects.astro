@@ -6,7 +6,7 @@ import PrismaIcon from '../components/icons/PrismaIcon.astro'
 import GraphQLIcon from '../components/icons/GraphQLIcon.astro'
 import MongoIcon from '../components/icons/MongoIcon.astro'
 import VueIcon from '../components/icons/VueIcon.astro'
-
+import ReactNativeIcon from '../components/icons/ReactNativeIcon.astro'
 
 const TAGS = {
     NEXT: {
@@ -43,6 +43,11 @@ const TAGS = {
         name: 'Vue.js',
         class: "bg-black text-white",
         icon: VueIcon
+    },
+    REACT_NATIVE: {
+        name: 'React Native',
+        class: "bg-black text-white",
+        icon: ReactNativeIcon
     }
 }
 
@@ -62,6 +67,14 @@ const PROJECTS = [
         github: 'https://github.com/falanges/librarymanager',
         image: 'ms-img.jpg',
         tags: [TAGS.NEST, TAGS.VUE, TAGS.GRAPHQL, TAGS.MONGO]
+    },
+    {
+        title: 'SE - Safe Economy',
+        description: 'Pequeña App Mobile para ahorrar dinero. Hecha con React Native y Expo.',
+        link: '#',
+        github: 'https://github.com/falanges/librarymanager',
+        image: 'Safe-economy.jpg',
+        tags: [TAGS.NEST, TAGS.REACT_NATIVE, TAGS.GRAPHQL, TAGS.MONGO]
     }
 ]
 ---
@@ -80,7 +93,9 @@ const PROJECTS = [
                     </li>
                 ))}
             </ul>
-            <img class="w-[640px] h-[400px] sm:w-[750px] sm:h-[550px]" src={image} alt={`Captura de pantalla del proyecto ${title}`}>
+            {/* <img class="w-[640px] h-[400px] sm:w-[750px] sm:h-[550px]" src={image} alt={`Captura de pantalla del proyecto ${title}`}> */}
+            <img class="" src={image} alt={`Captura de pantalla del proyecto ${title}`}>
+
         </article>
     ))
 }

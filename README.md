@@ -52,3 +52,8 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+Gradientes: https://bg.ibelick.com
+Tabler Icons: tabler.io/icons
+Mockups: https://www.shots.so/
+Minificador de imagen: https://squoosh.app/
