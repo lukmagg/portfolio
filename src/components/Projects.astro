@@ -56,7 +56,7 @@ const PROJECTS = [
         title: 'UWU - Library Manager',
         description: 'App web para el manejo de bibliotecas de libros. Es un monorepo Construido con Nest js en el backend y Next (React) en el frontend. La base de datos es PostgreSQL (GraphQL).',
         link: '#',
-        github: 'https://github.com/falanges/librarymanager',
+        github: 'https://github.com/lukmagg/librarymanager',
         image: 'library-img.jpg',
         tags: [TAGS.NEXT, TAGS.POSTGRE, TAGS.NEST, TAGS.PRISMA, TAGS.GRAPHQL]
     },
@@ -64,7 +64,7 @@ const PROJECTS = [
         title: 'MS - Mushroom system',
         description: 'Sistema diseñado para la administracion de una compania dedicada a produccion y venta de setas comestibles. Esta hecha en el backend con NestJS y el frontend con Vue.js y Quasar. La base de datos es MongoDB, y usa el ORM Mongoose y GraphQL.',
         link: '#',
-        github: 'https://github.com/falanges/librarymanager',
+        github: 'https://github.com/lukmagg/front-msm',
         image: 'ms-img.jpg',
         tags: [TAGS.NEST, TAGS.VUE, TAGS.GRAPHQL, TAGS.MONGO]
     },
@@ -72,7 +72,7 @@ const PROJECTS = [
         title: 'SE - Safe Economy',
         description: 'Pequeña App Mobile para ahorrar dinero. Hecha con React Native y Expo.',
         link: '#',
-        github: 'https://github.com/falanges/librarymanager',
+        github: 'https://github.com/lukmagg/safe-economy',
         image: 'Safe-economy.jpg',
         tags: [TAGS.NEST, TAGS.REACT_NATIVE, TAGS.GRAPHQL, TAGS.MONGO]
     }
@@ -84,6 +84,8 @@ const PROJECTS = [
         <article class="flex flex-col mb-24">
             <h3 class="text-2xl font-semibold text-cyan-300 mb-2">{title}</h3>
             <p class="text-lg text-white mb-4 text-pretty">{description}</p>
+            <a href={github}>Code: {github}</li>
+            
             <ul class="flex mb-4 mt-4 flex-wrap">
                 {
                     tags.map((tag) => (
